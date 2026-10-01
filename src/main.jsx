@@ -119,9 +119,9 @@ function App() {
   return (
     <div className="site-shell">
       <header className="site-nav">
-        <a className="brand" href="#top" aria-label="返回梁宇杰主页">
-          <span className="brand-mark">LYJ</span>
-          <span className="brand-copy"><strong>梁宇杰</strong><small>/ AI Product &amp; Prototype</small></span>
+        <a className="brand" href="#top" aria-label="返回白术主页">
+          <span className="brand-mark">BS</span>
+          <span className="brand-copy"><strong>白术</strong><small>/ AI Product &amp; Prototype</small></span>
         </a>
         <nav className="nav-links" aria-label="主导航">
           <a href="#cases">代表案例</a>
@@ -141,7 +141,7 @@ function App() {
           <div className="hero-copy">
             <div className="status-pill"><span className="status-dot" />AI 应用产品与原型开发 · 寻找实习 / 全职机会</div>
             <h1>把 AI 想法，<br /><span>做成能用的产品。</span></h1>
-            <p className="hero-lead">我是梁宇杰，河北外国语学院大数据技术专业本科在读。偏 AI 应用产品、原型开发与产品优化，习惯从具体问题出发，把页面、流程和工具做成可演示、可继续迭代的版本。</p>
+            <p className="hero-lead">我是白术，河北外国语学院大数据技术专业本科在读。偏 AI 应用产品、原型开发与产品优化，习惯从具体问题出发，把页面、流程和工具做成可演示、可继续迭代的版本。</p>
             <div className="hero-actions"><a className="primary-button" href="#cases">查看代表案例 <ChevronRight size={16} aria-hidden="true" /></a><a className="secondary-button" href={resumePdf} download>下载简历（PDF） <Download size={16} aria-hidden="true" /></a></div>
             <div className="hero-tags"><span>AI 应用产品</span><span>原型开发</span><span>产品体验优化</span><span>前端与全栈原型</span></div>
           </div>
@@ -175,10 +175,10 @@ function App() {
 
         <section className="background-section" id="background"><div className="background-copy"><span className="section-eyebrow">背景与匹配</span><h2>我是一个正在把能力做实的学生开发者。</h2><p>我目前就读于河北外国语学院大数据技术专业，本科在读。我的项目大多从一个真实问题开始，再用前端、AI、本地数据和流程化方法把它推进成可以展示的结果。</p><p>我更适合 AI 应用产品、AI 产品优化、前端 / 全栈原型实现这几类岗位。我的优势不是把自己包装成万能的人，而是能快速进入具体问题，把第一版做出来，然后继续把它变得更可靠。</p><div className="background-facts"><div><span>教育经历</span><strong>河北外国语学院</strong><small>大数据技术 · 本科在读</small></div><div><span>当前定位</span><strong>AI 应用产品与原型开发</strong><small>石家庄 / 可沟通到岗</small></div></div></div><aside className="fit-card"><span className="section-eyebrow">ROLE FIT</span><h3>我更匹配的方向</h3><ol><li><span>01</span><strong>AI 应用产品与原型开发</strong><small>我能拆需求、做页面、接能力、跑通核心流程。</small></li><li><span>02</span><strong>AI 产品优化</strong><small>我会关注信息结构、交互体验和模型能力怎样落到产品里。</small></li><li><span>03</span><strong>前端 / 全栈原型实现</strong><small>我适合把方向快速落成可试用、可迭代的骨架。</small></li></ol></aside></section>
 
-        <section className="contact-section" id="contact"><div className="contact-head"><div><span className="section-eyebrow">联系交流</span><h2>如果你正在做 AI 应用，欢迎聊聊。</h2></div><span className="contact-status"><i />随时支持交流与到岗</span></div><div className="contact-grid"><div className="contact-card"><span>EMAIL / 邮件沟通</span><strong>2675644633@qq.com</strong><button type="button" onClick={copyEmail}>{copied ? <Check size={15} aria-hidden="true" /> : <Copy size={15} aria-hidden="true" />}{copied ? '邮箱已复制' : '点击复制完整邮箱'}</button></div><div className="contact-card"><span>TEL &amp; WECHAT / 电话与微信</span><strong>133-8583-4697</strong><a href="tel:13385834697"><Phone size={15} aria-hidden="true" />直接拨打 / 添加微信</a></div><div className="contact-card"><span>CODE REPOSITORY / 源码主页</span><strong>github.com/OKOKIIY/13</strong><a href={githubProfile} target="_blank" rel="noreferrer"><Github size={15} aria-hidden="true" />访问 GitHub 主页</a></div></div><div className="contact-actions"><a className="primary-button" href="mailto:2675644633@qq.com"><Mail size={15} aria-hidden="true" />直接发送邮件</a><a className="secondary-button" href={resumePdf} download><Download size={15} aria-hidden="true" />下载 PDF 简历</a><span>LIANG YUJIE / VERIFIED SELF-INTRODUCTION</span></div></section>
+        <section className="contact-section" id="contact"><div className="contact-head"><div><span className="section-eyebrow">联系交流</span><h2>如果你正在做 AI 应用，欢迎聊聊。</h2></div><span className="contact-status"><i />随时支持交流与到岗</span></div><div className="contact-grid"><div className="contact-card"><span>EMAIL / 邮件沟通</span><strong>2675644633@qq.com</strong><button type="button" onClick={copyEmail}>{copied ? <Check size={15} aria-hidden="true" /> : <Copy size={15} aria-hidden="true" />}{copied ? '邮箱已复制' : '点击复制完整邮箱'}</button></div><div className="contact-card"><span>TEL &amp; WECHAT / 电话与微信</span><strong>133-8583-4697</strong><a href="tel:13385834697"><Phone size={15} aria-hidden="true" />直接拨打 / 添加微信</a></div><div className="contact-card"><span>CODE REPOSITORY / 源码主页</span><strong>github.com/OKOKIIY/13</strong><a href={githubProfile} target="_blank" rel="noreferrer"><Github size={15} aria-hidden="true" />访问 GitHub 主页</a></div></div><div className="contact-actions"><a className="primary-button" href="mailto:2675644633@qq.com"><Mail size={15} aria-hidden="true" />直接发送邮件</a><a className="secondary-button" href={resumePdf} download><Download size={15} aria-hidden="true" />下载 PDF 简历</a><span>BAISHU / VERIFIED SELF-INTRODUCTION</span></div></section>
       </main>
 
-      <footer className="site-footer"><span><strong>梁宇杰</strong> © 2026 LIANG YUJIE · PERSONAL PORTFOLIO</span><nav><a href="#cases">案例索引</a><a href="#method">工作方法</a><a href="#skills">能力矩阵</a><a href="#background">背景与匹配</a><a href="#top">返回顶部 <ArrowUp size={13} aria-hidden="true" /></a></nav></footer>
+      <footer className="site-footer"><span><strong>白术</strong> © 2026 BAISHU · PERSONAL PORTFOLIO</span><nav><a href="#cases">案例索引</a><a href="#method">工作方法</a><a href="#skills">能力矩阵</a><a href="#background">背景与匹配</a><a href="#top">返回顶部 <ArrowUp size={13} aria-hidden="true" /></a></nav></footer>
     </div>
   );
 }
