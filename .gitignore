@@ -1,0 +1,10 @@
+node_modules/
+dist/
+tmp/
+output/
+*.log
+desktop*.png
+mobile*.png
+PROJECT_REVIEW_DRAFT.md
+pdf_resume_content.txt
+resume-*.md
