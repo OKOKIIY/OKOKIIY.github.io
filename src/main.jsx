@@ -85,6 +85,48 @@ const cases = [
     link: '#contact',
     linkLabel: '联系获取演示',
   },
+  {
+    id: 'content-studio',
+    type: 'AI SaaS / 内容智造',
+    tag: 'AI SaaS',
+    title: '内容智造',
+    subtitle: '把主题输入、生成、复查和审核收进一条内容流程',
+    category: 'ai',
+    status: 'LOCAL DEMO / REPRODUCIBLE',
+    image: '/project-previews/social-media-ai.png',
+    alt: '内容智造小红书 AI 内容工作台界面预览',
+    intro: '我做了一个内容生产型 AI SaaS 原型，把一次生成从“输入主题”推进到“保存、复查、重试和人工审核”，让结果不只是出现一下，而是能继续被处理。',
+    actions: [
+      '我把主题、标题、正文和标签拆成结构化内容，方便继续编辑和预览。',
+      '我补上 pending、completed、failed 和 needs_review 等状态，让失败也能被看见。',
+      '我保留 Mock 演示和真实 Provider 的边界，没有把本地演示写成线上模型服务。',
+    ],
+    proof: ['创建页与小红书预览卡', '历史记录与失败重试', '审核状态和数据库记录结构'],
+    stack: ['Next.js', 'Prisma', 'SQLite', '状态流转'],
+    link: '#contact',
+    linkLabel: '联系获取本地演示',
+  },
+  {
+    id: 'comic-drama',
+    type: '视觉工具 / AI 漫剧工作台',
+    tag: '视觉工具',
+    title: 'AI 漫剧工作台',
+    subtitle: '把角色、分镜、时间线和字幕整理成可预览的样片流程',
+    category: 'visual',
+    status: 'PROTOTYPE / SHOWCASE',
+    image: '/project-previews/ai-comic-drama-studio.png',
+    alt: 'AI 漫剧工作台分镜与时间线预览',
+    intro: '我做了一个竖屏 AI 漫剧制作工作台原型，把角色设定、分镜、时间线、字幕和质检证据整理成一条可以播放和复查的样片流程。',
+    actions: [
+      '我把第 1 集拆成 12 个镜头，支持逐镜头播放、暂停、重播和时间线跳转。',
+      '我用角色一致性卡、镜头标题和字幕稿把复杂的内容生产过程变成可读界面。',
+      '当前交付边界是本地分镜样片，真实图生图、配音和 MP4 导出仍明确留在待验证范围。',
+    ],
+    proof: ['69 秒时间线播放器', '角色一致性与分镜证据', '字幕、旁白和质量检查清单'],
+    stack: ['HTML', 'CSS', 'JavaScript', '时间线交互'],
+    link: '#contact',
+    linkLabel: '联系获取样片演示',
+  },
 ];
 
 const skillGroups = [
@@ -159,7 +201,7 @@ function App() {
         </section>
 
         <section className="cases-section" id="cases">
-          <div className="section-head"><div><span className="section-eyebrow">真实落地与原型探索</span><h2>代表案例 // 我做成的，不只是页面</h2><p>下面只放我目前最愿意在面试里讲清楚的三件事。</p></div><div className="case-filter" role="group" aria-label="案例筛选">{[['all', '全部案例'], ['ai', 'AI 产品'], ['workflow', '流程与工具']].map(([value, label]) => <button key={value} type="button" className={filter === value ? 'active' : ''} aria-pressed={filter === value} onClick={() => setFilter(value)}>{label}</button>)}</div></div>
+          <div className="section-head"><div><span className="section-eyebrow">真实落地与原型探索</span><h2>代表案例 // 我做成的，不只是页面</h2><p>下面只放我目前最愿意在面试里讲清楚的五件事。</p></div><div className="case-filter" role="group" aria-label="案例筛选">{[['all', '全部案例'], ['ai', 'AI 产品'], ['workflow', '流程与工具'], ['visual', '视觉与内容']].map(([value, label]) => <button key={value} type="button" className={filter === value ? 'active' : ''} aria-pressed={filter === value} onClick={() => setFilter(value)}>{label}</button>)}</div></div>
           <div className="case-list">{visibleCases.map((item) => <article className="case-card" key={item.id}>
             <div className="case-card-head"><div className="case-heading"><span className={`case-number ${item.category}`}>{item.tag}</span><span className="case-type">{item.type}</span><h3>{item.title}</h3></div><span className={`case-status ${item.category}`}>{item.status}</span></div>
             <div className="case-body">

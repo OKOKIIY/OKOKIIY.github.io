@@ -118,11 +118,13 @@ h1, h2, h3 { letter-spacing: 0; }
 .case-number { padding: 5px 10px; border-radius: 999px; color: #fff; font-size: 11px; font-weight: 500; }
 .case-number.ai { background: var(--blue); }
 .case-number.workflow { background: #283641; }
+.case-number.visual { background: #6b7668; }
 .case-type { color: var(--secondary); font-size: 11px; }
 .case-heading h3 { flex-basis: 100%; margin: 1px 0 0; font-size: 22px; font-weight: 600; }
 .case-status { flex: none; padding: 6px 10px; border: 1px solid transparent; border-radius: 999px; font: 10px/1.2 'JetBrains Mono', monospace; }
 .case-status.ai { border-color: rgba(0, 113, 227, .16); background: var(--blue-soft); color: var(--blue); }
 .case-status.workflow { border-color: rgba(0, 0, 0, .08); background: var(--subtle); color: #59606a; }
+.case-status.visual { border-color: rgba(0, 0, 0, .08); background: #f1f3ee; color: #586450; }
 .case-body { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(300px, .88fr); gap: 34px; align-items: stretch; padding-top: 24px; }
 .case-copy { display: grid; gap: 21px; align-content: start; }
 .case-block { min-width: 0; }
@@ -242,7 +244,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid rgba(0, 113, 227, .22
   .cases-section, .skills-section, .background-section { padding-top: 67px; }
   .section-head, .section-head.simple, .contact-head { display: block; }
   .case-filter { margin-top: 21px; }
-  .case-filter button { padding-right: 11px; padding-left: 11px; }
+  .case-filter { max-width: 100%; overflow-x: auto; }
+  .case-filter button { flex: none; padding-right: 11px; padding-left: 11px; }
   .case-card { padding: 21px 18px 19px; border-radius: 19px; }
   .case-card-head { align-items: start; flex-direction: column; gap: 12px; }
   .case-heading h3 { font-size: 20px; }
