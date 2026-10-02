@@ -3,6 +3,7 @@ dist/
 tmp/
 output/
 *.log
+!public/project-previews/*.png
 desktop*.png
 mobile*.png
 PROJECT_REVIEW_DRAFT.md
