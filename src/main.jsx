@@ -65,6 +65,28 @@ const cases = [
     linkLabel: '访问在线演示',
   },
   {
+    id: 'debug-gate',
+    type: '开发工具 / Debug Gate',
+    tag: '流程与工具',
+    title: 'Debug Gate',
+    subtitle: '代码修改确认台 · 先看改动，再确认写入',
+    category: 'workflow',
+    status: '在线预览 / AI 未连接',
+    image: '/project-previews/debug-gate.webp',
+    imageCaption: '本地版界面 · 点击查看大图',
+    alt: 'Debug Gate 代码修改确认台的本地演示界面，包含文件列表、待确认修改和备份状态',
+    intro: '我做了一个代码修改确认台，把文件查看、改动对比和确认写入放进同一个界面，让每次修改都能先看清、再决定。',
+    actions: [
+      '我把文件选择、修改预览、确认与取消整理成一条直观的操作路径。',
+      '我在本地版加入写入前核对、原文件备份和最近一次修改撤回，保留用户的控制权。',
+      '我把界面改成易懂的中文；公开预览只使用内置示例，AI 尚未接入，不做真实错误诊断。',
+    ],
+    proof: ['公开示例在线预览', '本地版确认、备份与撤回测试', '中文状态提示与响应式布局'],
+    stack: ['React', 'Node.js', 'Diff 预览', '本地备份'],
+    link: 'https://debug-gate-demo-cloudbase-d3gsuffore6daf700.webapps.tcloudbase.com/',
+    linkLabel: '打开在线预览',
+  },
+  {
     id: 'workbench',
     type: 'AI 工具 / 个人工作台',
     tag: '流程与工具',
@@ -166,11 +188,10 @@ function App() {
           <span className="brand-copy"><strong>白术</strong><small>/ AI Product &amp; Prototype</small></span>
         </a>
         <nav className="nav-links" aria-label="主导航">
-          <a href="#cases">代表案例</a>
-          <a href="#method">工作方法</a>
-          <a href="#skills">能力矩阵</a>
-          <a href="#background">背景与匹配</a>
-          <a href="#contact">联系交流</a>
+          <a href="#cases">案例</a>
+          <a href="#method">方法</a>
+          <a href="#skills">能力</a>
+          <a href="#background">关于我</a>
         </nav>
         <div className="nav-actions">
           <a className="nav-github" href={githubProfile} target="_blank" rel="noreferrer">GitHub <ExternalLink size={13} aria-hidden="true" /></a>
@@ -188,32 +209,43 @@ function App() {
             <div className="hero-tags"><span>AI 应用产品</span><span>原型开发</span><span>产品体验优化</span><span>前端与全栈原型</span></div>
           </div>
           <div className="hero-preview" aria-label="阅伴 AI 项目预览">
-            <div className="preview-window-bar"><div className="window-lights"><i /><i /><i /></div><span>阅伴 AI · Reader Canvas</span><b><span className="live-dot" />LIVE VERIFIED</b></div>
-            <div className="preview-surface"><div className="preview-meta"><span>▣ 《现代技术架构与系统评估》.epub</span><em>84% 进度</em></div><div className="preview-grid"><div className="preview-reading"><img src="/project-previews/ai-reading-companion.png" alt="阅伴 AI 阅读器项目界面" /></div><div className="preview-aside"><span>证据链式 AI 阅读</span><strong>为什么我们读不下去</strong><p>我让回答回到原文，再给出下一步读法。</p><div className="preview-progress"><i /></div><small>本地数据 · 阅读记录 · 陪读卡片</small></div></div></div>
-            <div className="preview-footer"><span>本地优先 / 真实项目截图</span><a href="https://okokiiy.github.io/13/" target="_blank" rel="noreferrer" aria-label="打开阅伴 AI 在线入口"><ExternalLink size={15} aria-hidden="true" /></a></div>
+            <div className="preview-window-bar">
+              <div className="window-lights" aria-hidden="true"><i /><i /><i /></div>
+              <span>阅伴 AI</span>
+              <b><span className="live-dot" />在线入口</b>
+            </div>
+            <div className="preview-surface">
+              <a className="preview-reading" href="/project-previews/ai-reading-companion.png" target="_blank" rel="noreferrer" aria-label="查看阅伴 AI 项目大图">
+                <img src="/project-previews/ai-reading-companion.png" alt="阅伴 AI 阅读器界面与项目介绍" width="1600" height="900" />
+              </a>
+            </div>
+            <div className="preview-footer">
+              <span>我做的陪读型 AI 阅读器 · 本地优先</span>
+              <a href="https://okokiiy.github.io/13/" target="_blank" rel="noreferrer">打开项目 <ExternalLink size={14} aria-hidden="true" /></a>
+            </div>
           </div>
         </section>
 
         <section className="intro-grid" aria-label="自我介绍摘要">
-          <article><span className="intro-icon">01</span><h2>我在做什么</h2><p>我把 AI 能力、页面体验和真实工作流程连起来，做成别人可以理解、操作和继续使用的版本。</p></article>
-          <article><span className="intro-icon">02</span><h2>我擅长什么</h2><p>我擅长从具体问题开始，把需求拆成原型、状态、数据和证据，再推进到可演示的结果。</p></article>
-          <article><span className="intro-icon">03</span><h2>我想去哪里</h2><p>我希望在 AI 应用、产品优化或工具型产品团队里，继续参与从 0 到 1 的落地和迭代。</p></article>
+          <article><h2>我在做什么</h2><p>我把 AI 能力、页面体验和真实工作流程连起来，做成别人可以理解、操作和继续使用的版本。</p></article>
+          <article><h2>我擅长什么</h2><p>我擅长从具体问题开始，把需求拆成原型、状态、数据和证据，再推进到可演示的结果。</p></article>
+          <article><h2>我想去哪里</h2><p>我希望在 AI 应用、产品优化或工具型产品团队里，继续参与从 0 到 1 的落地和迭代。</p></article>
         </section>
 
         <section className="cases-section" id="cases">
-          <div className="section-head"><div><span className="section-eyebrow">真实落地与原型探索</span><h2>代表案例 // 我做成的，不只是页面</h2><p>下面只放我目前最愿意在面试里讲清楚的五件事。</p></div><div className="case-filter" role="group" aria-label="案例筛选">{[['all', '全部案例'], ['ai', 'AI 产品'], ['workflow', '流程与工具'], ['visual', '视觉与内容']].map(([value, label]) => <button key={value} type="button" className={filter === value ? 'active' : ''} aria-pressed={filter === value} onClick={() => setFilter(value)}>{label}</button>)}</div></div>
-          <div className="case-list">{visibleCases.map((item) => <article className="case-card" key={item.id}>
-            <div className="case-card-head"><div className="case-heading"><span className={`case-number ${item.category}`}>{item.tag}</span><span className="case-type">{item.type}</span><h3>{item.title}</h3></div><span className={`case-status ${item.category}`}>{item.status}</span></div>
+          <div className="section-head"><div><span className="section-eyebrow">真实落地与原型探索</span><h2>代表案例</h2><p>我做过的项目，以及我能拿出的证据。</p></div><div className="case-filter" role="group" aria-label="案例筛选">{[['all', '全部案例'], ['ai', 'AI 产品'], ['workflow', '流程与工具'], ['visual', '视觉与内容']].map(([value, label]) => <button key={value} type="button" className={filter === value ? 'active' : ''} aria-pressed={filter === value} onClick={() => setFilter(value)}>{label}</button>)}</div></div>
+          <div className="case-list">{visibleCases.map((item) => <article className="case-card" data-project={item.id} key={item.id}>
+            <div className="case-card-head"><div className="case-heading"><span className={`case-number ${item.category}`}>{item.tag}</span><h3>{item.title}</h3></div><span className={`case-status ${item.category}`}>{item.status}</span></div>
             <div className="case-body">
-              <div className="case-copy"><div className="case-block"><span className="block-label">【我怎么介绍它】</span><p className="case-intro">{item.intro}</p></div><div className="case-block"><span className="block-label blue">【我在里面做了什么】</span><ul>{item.actions.map((action) => <li key={action}><Check size={15} aria-hidden="true" />{action}</li>)}</ul></div><div className="case-block"><span className="block-label">【我能拿出的证据】</span><div className="proof-list">{item.proof.map((proof) => <span key={proof}><Check size={14} aria-hidden="true" />{proof}</span>)}</div></div></div>
-              <div className="case-evidence"><div className="evidence-label">CASE EVIDENCE / 截图与技术记录</div><div className="evidence-image"><img src={item.image} alt={item.alt} /></div><div className="evidence-caption"><strong>{item.subtitle}</strong><span>真实项目截图 / 统一 16:9 封面</span></div><div className="stack-tags">{item.stack.map((tech) => <span key={tech}>{tech}</span>)}</div><a className="case-link" href={item.link} target={item.link.startsWith('http') ? '_blank' : undefined} rel={item.link.startsWith('http') ? 'noreferrer' : undefined}>{item.linkLabel} <ExternalLink size={15} aria-hidden="true" /></a></div>
+              <div className="case-copy"><div className="case-block"><span className="block-label">我的项目</span><p className="case-intro">{item.intro}</p></div><div className="case-block"><span className="block-label blue">我做了什么</span><ul>{item.actions.map((action) => <li key={action}><Check size={15} aria-hidden="true" />{action}</li>)}</ul></div><div className="case-block"><span className="block-label">我能拿出的证据</span><div className="proof-list">{item.proof.map((proof) => <span key={proof}><Check size={14} aria-hidden="true" />{proof}</span>)}</div></div></div>
+              <div className="case-evidence"><a className="evidence-image" href={item.image} target="_blank" rel="noreferrer" aria-label={`查看${item.title}项目大图`}><img src={item.image} alt={item.alt} loading="lazy" width="1600" height="900" /></a><div className="evidence-caption"><strong>{item.subtitle}</strong><span>{item.imageCaption || '项目界面预览 · 点击查看大图'}</span></div><div className="stack-tags">{item.stack.map((tech) => <span key={tech}>{tech}</span>)}</div><a className="case-link" href={item.link} target={item.link.startsWith('http') ? '_blank' : undefined} rel={item.link.startsWith('http') ? 'noreferrer' : undefined}>{item.linkLabel} <ExternalLink size={15} aria-hidden="true" /></a></div>
             </div>
           </article>)}</div>
         </section>
 
-        <section className="method-section" id="method"><div className="method-panel"><div className="method-head"><div><span className="section-eyebrow">我的工作方式</span><h2>我会把事情推到能被看见。</h2><p>我不把还没验证的想法说成结果；我更在意一个具体问题有没有被理解、被做出来、被验证和继续迭代。</p></div><span className="method-mark">WORKFLOW / 04</span></div><div className="method-grid">{methodSteps.map(([number, title, text]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p><small>LYJ · PRACTICE NOTE</small></article>)}</div></div></section>
+        <section className="method-section" id="method"><div className="method-panel"><div className="method-head"><div><span className="section-eyebrow">我的工作方式</span><h2>我会把事情推到能被看见。</h2><p>我不把还没验证的想法说成结果；我更在意一个具体问题有没有被理解、被做出来、被验证和继续迭代。</p></div></div><div className="method-grid">{methodSteps.map(([number, title, text]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
 
-        <section className="skills-section" id="skills"><div className="section-head simple"><div><span className="section-eyebrow">能力矩阵</span><h2>我如何把产品、代码和证据放在一起。</h2></div><span className="section-side-note">CAPABILITY MAP / 04</span></div><div className="skills-grid">{skillGroups.map(({ icon: Icon, title, text, tags }) => <article key={title}><div className="skill-icon"><Icon size={18} aria-hidden="true" /></div><div><h3>{title}</h3><p>{text}</p><div className="skill-tags">{tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div><ChevronRight size={16} aria-hidden="true" /></article>)}</div></section>
+        <section className="skills-section" id="skills"><div className="section-head simple"><div><span className="section-eyebrow">我的能力</span><h2>我如何把产品、代码和证据放在一起。</h2></div></div><div className="skills-grid">{skillGroups.map(({ icon: Icon, title, text, tags }) => <article key={title}><div className="skill-icon"><Icon size={18} aria-hidden="true" /></div><div><h3>{title}</h3><p>{text}</p><div className="skill-tags">{tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div></article>)}</div></section>
 
         <section className="background-section" id="background"><div className="background-copy"><span className="section-eyebrow">背景与匹配</span><h2>我是一个正在把能力做实的学生开发者。</h2><p>我目前就读于河北外国语学院大数据技术专业，本科在读。我的项目大多从一个真实问题开始，再用前端、AI、本地数据和流程化方法把它推进成可以展示的结果。</p><p>我更适合 AI 应用产品、AI 产品优化、前端 / 全栈原型实现这几类岗位。我的优势不是把自己包装成万能的人，而是能快速进入具体问题，把第一版做出来，然后继续把它变得更可靠。</p><div className="background-facts"><div><span>教育经历</span><strong>河北外国语学院</strong><small>大数据技术 · 本科在读</small></div><div><span>当前定位</span><strong>AI 应用产品与原型开发</strong><small>石家庄 / 可沟通到岗</small></div></div></div><aside className="fit-card"><span className="section-eyebrow">ROLE FIT</span><h3>我更匹配的方向</h3><ol><li><span>01</span><strong>AI 应用产品与原型开发</strong><small>我能拆需求、做页面、接能力、跑通核心流程。</small></li><li><span>02</span><strong>AI 产品优化</strong><small>我会关注信息结构、交互体验和模型能力怎样落到产品里。</small></li><li><span>03</span><strong>前端 / 全栈原型实现</strong><small>我适合把方向快速落成可试用、可迭代的骨架。</small></li></ol></aside></section>
 
